@@ -1,6 +1,10 @@
 Optional portrait input:
-Place your own photo at assets/profile-photo.jpg, then run:
+Place your portrait photo at assets/profile-photo.jpg, then run:
   pip install -r scripts/requirements.txt
   python scripts/generate_ascii_portrait.py
 
-The photo is processed locally. Only the generated ASCII SVG is intended for the profile.
+The generator isolates a dark edge-connected background, converts the subject
+to monochrome ASCII, and writes an SVG with a one-shot row-by-row reveal.
+The photo is processed locally. Only the generated ASCII SVG is intended for
+the profile. Pass a different input/output path as positional arguments, or
+use --static to write a non-animated preview.
